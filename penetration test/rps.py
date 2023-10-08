@@ -1,7 +1,7 @@
 # Send n requests persecond to Henver.
 # 
 # The max RPS (Requests Per Second) of Henver HTTP Server is about 1000 
-# with Intel Code i7 CPU.
+# with Intel Core i7 CPU.
 
 import threading
 import requests
