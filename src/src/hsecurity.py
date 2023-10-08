@@ -87,7 +87,8 @@ def hsecurity(request: list, clinet_ip: str="") -> dict:
                 "U", "V", "W", "X", "Y", "Z", \
 
                 # Special characters.
-                "_", "?", "&", "#", "/", "=", "-", ":", ".",
+                "_", "?", "&", "#", "/", "=", "-", ":", ".", "+", \
+                "(", ")"
             }: clear_file += char
 
         file = clear_file

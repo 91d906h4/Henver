@@ -1,2 +1,0 @@
-class URITooLongError(Exception):
-    pass
