@@ -10,7 +10,7 @@ def test():
     for _ in range(100):
         requests.request("GET", "http://127.0.0.1/temp/test.php?test=222")
 
-for i in range(1000):
+for _ in range(1000):
     threading.Thread(target=test).start()
 
 print("done")
