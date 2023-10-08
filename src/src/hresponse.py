@@ -102,7 +102,8 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
             command = [PHP_CGI, "./public" + file] + query_string
 
             # Execute PHP-CGI and get the result from CGI.
-            content = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False).stdout.decode(encoding=ENCODING)
+            content = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False)
+            content = content.stdout.decode(encoding=ENCODING)
 
         # Request fot media files.
         elif file_type in ["IMAGE", "VIDEO", "AUDIO"]:
