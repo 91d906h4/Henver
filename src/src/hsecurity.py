@@ -4,29 +4,16 @@
 
 # Import modules.
 import json
-import configparser
 
 from src.logger import logger
 from urllib.parse import unquote
+from src.hconfig import ALLOWED_METHODS, DIR_TRAV_FILTER, CLEAR_URL_PENC, URL_ONLY_ALNUM, \
+                        PREVENT_DDOS, MAX_URL_LEN, DDOS_COUNT, DDOS_TIME
 
-# Read conf file.
-main_conf = configparser.ConfigParser()
-main_conf.read("./config/main.ini")
-
+# Get banned IP address list.
 f = open("./config/ban.json")
 ban = json.load(f)
 f.close()
-
-# Const settings.
-# [Security]
-ALLOWED_METHODS = str(main_conf["security"]["allowed_methods"]).upper()
-DIR_TRAV_FILTER = str(main_conf["security"]["dir_trav_filter"])
-CLEAR_URL_PENC  = str(main_conf["security"]["clear_url_penc"])
-URL_ONLY_ALNUM  = str(main_conf["security"]["url_only_alnum"])
-PREVENT_DDOS    = str(main_conf["security"]["prevent_ddos"])
-MAX_URL_LEN     = str(main_conf["security"]["max_url_len"])
-DDOS_COUNT      = str(main_conf["security"]["ddos_count"])
-DDOS_TIME       = str(main_conf["security"]["ddos_time"])
 
 def hsecurity(request: list, clinet_ip: str="") -> dict:
     method          = request["method"]

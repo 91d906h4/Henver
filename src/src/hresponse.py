@@ -4,30 +4,12 @@
 
 # Import modules.
 import subprocess
-import configparser
 
 from src.logger import logger
 from src.hexception import URITooLongError
-
-# Read conf file.
-main_conf = configparser.ConfigParser()
-main_conf.read("./config/main.ini")
-
-# Const settings.
-# [Server]
-APPEND_SER_NAME = str(main_conf["server"]["append_ser_name"])
-DEFAULT_PAGE    = str(main_conf["server"]["default_page"])
-E400_PAGE       = str(main_conf["server"]["e400_page"])
-E403_PAGE       = str(main_conf["server"]["e403_page"])
-E404_PAGE       = str(main_conf["server"]["e404_page"])
-E409_PAGE       = str(main_conf["server"]["e409_page"])
-E414_PAGE       = str(main_conf["server"]["e414_page"])
-E500_PAGE       = str(main_conf["server"]["e500_page"])
-E502_PAGE       = str(main_conf["server"]["e502_page"])
-E503_PAGE       = str(main_conf["server"]["e503_page"])
-PHP_CGI         = str(main_conf["server"]["php_cgi"])
-# [Sys]
-ENCODING    = str(main_conf["sys"]["encoding"])
+from src.hconfig import DEFAULT_PAGE, ENCODING, APPEND_SER_NAME, PHP_CGI, \
+                        E400_PAGE, E403_PAGE, E404_PAGE, E409_PAGE, E414_PAGE, \
+                        E500_PAGE, E502_PAGE, E503_PAGE
 
 def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
     file            = request["file"]

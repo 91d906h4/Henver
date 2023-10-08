@@ -2,24 +2,12 @@
 import sys
 import socket
 import threading
-import configparser
 
 from src.logger import logger
 from src.hrequest import hrequest
 from src.hresponse import hresponse
 from src.hsecurity import hsecurity
-
-# Read conf file.
-main_conf = configparser.ConfigParser()
-main_conf.read("./config/main.ini")
-
-# Const settings.
-# [Server]
-SERVER_HOST = str(main_conf["server"]["host"])
-SERVER_PORT = int(main_conf["server"]["port"])
-DEFAULT_PAGE= str(main_conf["server"]["default_page"])
-# [Sys]
-ENCODING    = str(main_conf["sys"]["encoding"])
+from src.hconfig import SERVER_HOST, SERVER_PORT
 
 # Read server settings from command line.
 if len(sys.argv) > 1:
