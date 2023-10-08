@@ -55,42 +55,50 @@ def hrequest(request: str) -> dict:
         extension = file.split(".")[-1]
         extension = extension.lower()
 
-        if extension == "php": file_type = "PHP"; file_extension = "PHP"
+        extensions = {
+            # PHP.
+            "php": ["PHP", "PHP"],
 
-        # Text.
-        elif extension == "js": file_type = "TEXT"; file_extension = "JS"
-        elif extension == "txt": file_type = "TEXT"; file_extension = "TXT"
-        elif extension == "css": file_type = "TEXT"; file_extension = "CSS"
-        elif extension == "csv": file_type = "TEXT"; file_extension = "CSV"
-        elif extension in ["html", "htm"]: file_type = "TEXT"; file_extension = "HTML"
+            # Text.
+            "js": ["TEXT", "JS"],
+            "txt": ["TEXT", "TXT"],
+            "css": ["TEXT", "CSS"],
+            "csv": ["TEXT", "CSV"],
+            "html": ["TEXT", "HTML"],
+            "htm": ["TEXT", "HTML"],
 
-        # Application.
-        elif extension == "rar": file_type = "APP"; file_extension = "RAR"
-        elif extension == "bin": file_type = "APP"; file_extension = "BIN"
-        elif extension == "pdf": file_type = "APP"; file_extension = "PDF"
-        elif extension == "xml": file_type = "APP"; file_extension = "XML"
-        elif extension == "json": file_type = "APP"; file_extension = "JSON"
+            # Application.
+            "rar": ["APP", "RAR"],
+            "bin": ["APP", "BIN"],
+            "pdf": ["APP", "PDF"],
+            "xml": ["APP", "XML"],
+            "json": ["APP", "JSON"],
 
-        # Image.
-        elif extension == "png": file_type = "IMAGE"; file_extension = "PNG"
-        elif extension == "gif": file_type = "IMAGE"; file_extension = "GIF"
-        elif extension == "svg": file_type = "IMAGE"; file_extension = "SVG"
-        elif extension == "bmp": file_type = "IMAGE"; file_extension = "BMP"
-        elif extension == "ico": file_type = "IMAGE"; file_extension = "ICO"
-        elif extension == "webp": file_type = "IMAGE"; file_extension = "WEBP"
-        elif extension in ["jpg", "jpeg"]: file_type = "IMAGE"; file_extension = "JPEG"
+            # Image.
+            "png": ["IMAGE", "PNG"],
+            "gif": ["IMAGE", "GIF"],
+            "svg": ["IMAGE", "SVG"],
+            "bmp": ["IMAGE", "BMP"],
+            "ico": ["IMAGE", "ICO"],
+            "jpg": ["IMAGE", "JPEG"],
+            "jpeg": ["IMAGE", "JPEG"],
+            "webp": ["IMAGE", "WEBP"],
 
-        # Video.
-        elif extension == "mp4": file_type = "VIDEO"; file_extension = "MP4"
-        elif extension == "avi": file_type = "VIDEO"; file_extension = "AVI"
-        elif extension == "webm": file_type = "VIDEO"; file_extension = "WEBM"
+            # Video.
+            "mp4": ["VIDEO", "MP4"],
+            "avi": ["VIDEO", "AVI"],
+            "webm": ["VIDEO", "WEBM"],
 
-        # Audio.
-        elif extension == "MP3": file_type = "AUDIO"; file_extension = "MP3"
-        elif extension == "wav": file_type = "AUDIO"; file_extension = "WAV"
-        elif extension == "aac": file_type = "AUDIO"; file_extension = "ACC"
-        elif extension == "abw": file_type = "AUDIO"; file_extension = "ABW"
-        elif extension == "weba": file_type = "AUDIO"; file_extension = "WEBA"
+            # Audio.
+            "mp3": ["AUDIO", "MP3"],
+            "wav": ["AUDIO", "WAV"],
+            "aac": ["AUDIO", "AAC"],
+            "abw": ["AUDIO", "ABW"],
+            "weba": ["AUDIO", "WEBA"],
+        }
+
+        if extension in extensions:
+            file_type, file_extension = extensions[extension]
 
     return {
         "method":           method,
