@@ -81,8 +81,8 @@ def hsecurity(request: list, clinet_ip: str="") -> dict:
         file = clear_file
 
     # Detect DOS/DDOS attack.
-    if PREVENT_DDOS == "enable":
-        pass
+    # if PREVENT_DDOS == "enable":
+    #     pass
 
     # Redirect (fix) the queries that tend to do directory traversal.
     if DIR_TRAV_FILTER == "enable":
