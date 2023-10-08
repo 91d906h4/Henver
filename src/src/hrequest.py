@@ -58,43 +58,43 @@ def hrequest(request: str) -> dict:
         # Using "dict" to make sure the search time compelixty is O(1).
         extensions = {
             # PHP.
-            "php": ["PHP", "PHP"],
+            "php":  ["PHP", "PHP"],
 
             # Text.
-            "js": ["TEXT", "JS"],
-            "txt": ["TEXT", "TXT"],
-            "css": ["TEXT", "CSS"],
-            "csv": ["TEXT", "CSV"],
+            "js":   ["TEXT", "JS"],
+            "txt":  ["TEXT", "TXT"],
+            "css":  ["TEXT", "CSS"],
+            "csv":  ["TEXT", "CSV"],
+            "htm":  ["TEXT", "HTML"],
             "html": ["TEXT", "HTML"],
-            "htm": ["TEXT", "HTML"],
 
             # Application.
-            "rar": ["APP", "RAR"],
-            "bin": ["APP", "BIN"],
-            "pdf": ["APP", "PDF"],
-            "xml": ["APP", "XML"],
+            "rar":  ["APP", "RAR"],
+            "bin":  ["APP", "BIN"],
+            "pdf":  ["APP", "PDF"],
+            "xml":  ["APP", "XML"],
             "json": ["APP", "JSON"],
 
             # Image.
-            "png": ["IMAGE", "PNG"],
-            "gif": ["IMAGE", "GIF"],
-            "svg": ["IMAGE", "SVG"],
-            "bmp": ["IMAGE", "BMP"],
-            "ico": ["IMAGE", "ICO"],
-            "jpg": ["IMAGE", "JPEG"],
+            "png":  ["IMAGE", "PNG"],
+            "gif":  ["IMAGE", "GIF"],
+            "svg":  ["IMAGE", "SVG"],
+            "bmp":  ["IMAGE", "BMP"],
+            "ico":  ["IMAGE", "ICO"],
+            "jpg":  ["IMAGE", "JPEG"],
             "jpeg": ["IMAGE", "JPEG"],
             "webp": ["IMAGE", "WEBP"],
 
             # Video.
-            "mp4": ["VIDEO", "MP4"],
-            "avi": ["VIDEO", "AVI"],
+            "mp4":  ["VIDEO", "MP4"],
+            "avi":  ["VIDEO", "AVI"],
             "webm": ["VIDEO", "WEBM"],
 
             # Audio.
-            "mp3": ["AUDIO", "MP3"],
-            "wav": ["AUDIO", "WAV"],
-            "aac": ["AUDIO", "AAC"],
-            "abw": ["AUDIO", "ABW"],
+            "mp3":  ["AUDIO", "MP3"],
+            "wav":  ["AUDIO", "WAV"],
+            "aac":  ["AUDIO", "AAC"],
+            "abw":  ["AUDIO", "ABW"],
             "weba": ["AUDIO", "WEBA"],
         }
 

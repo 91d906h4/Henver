@@ -41,41 +41,41 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
     }
     r_content_type = {
         # PHP.
-        "PHP": "text/html",
+        "PHP":  "text/html",
 
         # Text.
-        "JS": "text/javascript",
-        "TXT": "text/plain",
-        "CSS": "text/css",
-        "CSV": "text/csv",
+        "JS":   "text/javascript",
+        "TXT":  "text/plain",
+        "CSS":  "text/css",
+        "CSV":  "text/csv",
         "HTML": "text/html",
 
         # Application.
-        "RAR": "application/vnd.rar",
-        "BIN": "application/octet-stream",
-        "PDF": "application/pdf",
-        "XML": "application/xml",
+        "RAR":  "application/vnd.rar",
+        "BIN":  "application/octet-stream",
+        "PDF":  "application/pdf",
+        "XML":  "application/xml",
         "JSON": "application/json",
 
         # Image.
-        "PNG": "image/png",
-        "GIF": "image/gif",
-        "SVG": "image/svg+xml",
-        "BMP": "image/bmp",
-        "ICO": "image/vnd.microsoft.icon",
+        "PNG":  "image/png",
+        "GIF":  "image/gif",
+        "SVG":  "image/svg+xml",
+        "BMP":  "image/bmp",
+        "ICO":  "image/vnd.microsoft.icon",
         "WEBP": "image/webp",
         "JPEG": "image/jpeg",
 
         # Video.
-        "MP4": "video/mp4",
-        "AVI": "video/x-msvideo",
+        "MP4":  "video/mp4",
+        "AVI":  "video/x-msvideo",
         "WEBM": "video/webm",
 
         # Audio.
-        "MP3": "audio/mpeg",
-        "WAV": "audio/wav",
-        "AAC": "audio/aac",
-        "ABW": "audio/x-abiword",
+        "MP3":  "audio/mpeg",
+        "WAV":  "audio/wav",
+        "AAC":  "audio/aac",
+        "ABW":  "audio/x-abiword",
         "WEBA": "audio/weba",
     }
 
