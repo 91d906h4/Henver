@@ -1,0 +1,65 @@
+[INFO]	2023/10/08 00:45:27 127.0.0.1	Server start.
+[INFO]	2023/10/08 00:45:28 127.0.0.1	File '/temp/iasdasd' not found on this server.
+[INFO]	2023/10/08 00:45:28 127.0.0.1	Request for file '/favicon.ico'.
+[INFO]	2023/10/08 00:45:29 127.0.0.1	File '/temp/iasdasd' not found on this server.
+[INFO]	2023/10/08 00:45:29 127.0.0.1	Request for file '/favicon.ico'.
+[INFO]	2023/10/08 00:45:47 127.0.0.1	Server shutdown.
+[WARN]	2023/10/08 01:21:29 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
+[WARN]	2023/10/08 01:45:13 127.0.0.1	
+[WARN]	2023/10/08 01:46:04 127.0.0.1	
+[WARN]	2023/10/08 01:46:06 127.0.0.1	
+[WARN]	2023/10/08 01:48:04 127.0.0.1	
+[WARN]	2023/10/08 01:48:05 127.0.0.1	
+[WARN]	2023/10/08 01:48:20 127.0.0.1	
+[WARN]	2023/10/08 01:48:21 127.0.0.1	
+[WARN]	2023/10/08 01:48:24 127.0.0.1	
+[WARN]	2023/10/08 01:49:14 127.0.0.1	
+[WARN]	2023/10/08 01:49:17 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 01:49:18 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:30:18 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:30:23 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
+[WARN]	2023/10/08 02:32:12 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:32:14 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
+[WARN]	2023/10/08 02:43:13 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:43:15 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:43:23 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:44:09 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:44:12 127.0.0.1	Get request longer than max_url_len.
+[WARN]	2023/10/08 02:49:19 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
+[FITAL]	2023/10/08 03:17:07 127.0.0.1	Server start failed. Error message: [Errno 11001] getaddrinfo failed
+[FITAL]	2023/10/08 03:17:21 127.0.0.1	Server start failed. Error message: [Errno 11001] getaddrinfo failed
+[ERROR]	2023/10/08 03:23:05 127.0.0.1	'NoneType' object is not iterable
+[ERROR]	2023/10/08 03:23:07 127.0.0.1	'NoneType' object is not iterable
+[ERROR]	2023/10/08 03:23:19 127.0.0.1	'NoneType' object is not iterable
+[ERROR]	2023/10/08 03:23:58 127.0.0.1	can only concatenate list (not "str") to list
+[ERROR]	2023/10/08 03:23:59 127.0.0.1	can only concatenate list (not "str") to list
+[ERROR]	2023/10/08 03:24:06 127.0.0.1	can only concatenate list (not "str") to list
+[ERROR]	2023/10/08 03:24:12 127.0.0.1	can only concatenate list (not "str") to list
+[ERROR]	2023/10/08 03:24:13 127.0.0.1	can only concatenate list (not "str") to list
+[ERROR]	2023/10/08 03:49:56 127.0.0.1	can only concatenate list (not "NoneType") to list
+[ERROR]	2023/10/08 03:50:27 127.0.0.1	can only concatenate list (not "NoneType") to list
+[ERROR]	2023/10/08 03:50:28 127.0.0.1	can only concatenate list (not "NoneType") to list
+[ERROR]	2023/10/08 03:50:34 127.0.0.1	No connection adapters were found for '127.0.0.1:9000'
+[ERROR]	2023/10/08 03:50:34 127.0.0.1	No connection adapters were found for '127.0.0.1:9000'
+[ERROR]	2023/10/08 03:52:59 127.0.0.1	No connection adapters were found for '127.0.0.1:9000'
+[ERROR]	2023/10/08 03:53:03 127.0.0.1	No connection adapters were found for '127.0.0.1:9000'
+[ERROR]	2023/10/08 03:53:42 127.0.0.1	No connection adapters were found for '127.0.0.1:9000/temp/test.php'
+[ERROR]	2023/10/08 03:53:50 127.0.0.1	No connection adapters were found for '127.0.0.1:9000/temp/test.php'
+[ERROR]	2023/10/08 04:04:31 127.0.0.1	HTTPConnectionPool(host='127.0.0.1', port=9000): Max retries exceeded with url: /temp/test.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6ECFA8B50>: Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。'))
+[ERROR]	2023/10/08 04:04:32 127.0.0.1	HTTPConnectionPool(host='127.0.0.1', port=9000): Max retries exceeded with url: /temp/test.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6ED6CF410>: Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。'))
+[ERROR]	2023/10/08 04:04:36 127.0.0.1	HTTPConnectionPool(host='127.0.0.1', port=9000): Max retries exceeded with url: /temp/test.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001E6ED6DD250>: Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。'))
+[ERROR]	2023/10/08 04:05:07 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:05:08 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:20:55 127.0.0.1	'dict' object has no attribute 'method'
+[ERROR]	2023/10/08 04:21:21 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:21:23 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:21:26 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:22:11 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 04:22:12 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 14:10:47 127.0.0.1	HTTPConnectionPool(host='127.0.0.1', port=9000): Max retries exceeded with url: /temp/test.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001681EB38650>: Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。'))
+[ERROR]	2023/10/08 14:10:53 127.0.0.1	HTTPConnectionPool(host='127.0.0.1', port=9000): Max retries exceeded with url: /temp/test.php (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x000001681EB3ACD0>: Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。'))
+[ERROR]	2023/10/08 14:11:24 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 14:11:36 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 15:10:08 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[ERROR]	2023/10/08 15:10:09 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
+[WARN]	2023/10/08 15:17:35 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
