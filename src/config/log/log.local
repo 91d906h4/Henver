@@ -64,3 +64,4 @@
 [ERROR]	2023/10/08 15:10:09 127.0.0.1	('Connection aborted.', ConnectionResetError(10054, '既存の接続はリモート ホストに強制的に切断されました。', None, 10054, None))
 [WARN]	2023/10/08 15:17:35 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
 [WARN]	2023/10/08 16:14:18 127.0.0.1	[Errno 13] Permission denied: './public//temp'
+[WARN]	2023/10/08 21:46:01 127.0.0.1	[Errno 13] Permission denied: './public//temp'
