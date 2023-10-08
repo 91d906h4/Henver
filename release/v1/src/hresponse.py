@@ -96,11 +96,14 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
             # the connections between client and PHP-CGI.
             # If we use subprocess to run the PHP files, many features such as $_SERVER,
             # $_SESSION, etc. will no longer be useful.
+            # 
+            # https://github.com/Terr/pyfcgiclient/tree/master
 
             command = [PHP_CGI, "./public" + file] + query_string
 
             # Execute PHP-CGI and get the result from CGI.
-            content = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False).stdout.decode(encoding=ENCODING)
+            content = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False)
+            content = content.stdout.decode(encoding=ENCODING)
 
         # Request fot media files.
         elif file_type in ["IMAGE", "VIDEO", "AUDIO"]:
