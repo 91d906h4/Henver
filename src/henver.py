@@ -47,7 +47,7 @@ try:
 except Exception as e:
     # Quit if server start failed.
     print(f"Server start failed. Here's the error messages:")
-    print(e)
+    print(str(e))
 
     logger("FITAL", "Server start failed. Error message: " + str(e), SERVER_HOST)
 
