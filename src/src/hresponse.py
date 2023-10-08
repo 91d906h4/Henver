@@ -96,6 +96,8 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
             # the connections between client and PHP-CGI.
             # If we use subprocess to run the PHP files, many features such as $_SERVER,
             # $_SESSION, etc. will no longer be useful.
+            # 
+            # https://github.com/Terr/pyfcgiclient/tree/master
 
             command = [PHP_CGI, "./public" + file] + query_string
 
