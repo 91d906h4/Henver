@@ -55,6 +55,7 @@ def hrequest(request: str) -> dict:
         extension = file.split(".")[-1]
         extension = extension.lower()
 
+        # Using "dict" to make sure the search time compelixty is O(1).
         extensions = {
             # PHP.
             "php": ["PHP", "PHP"],
