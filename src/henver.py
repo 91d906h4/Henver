@@ -2,6 +2,7 @@
 import sys
 import socket
 import threading
+import webbrowser
 
 from src.logger import logger
 from src.hrequest import hrequest
@@ -42,6 +43,9 @@ try:
     print(f"Host {SERVER_HOST} listening on port {SERVER_PORT}.")
     print(f"Press CTRL-C to stop server...")
 
+    # If server started up successfully, then open website in browser.
+    webbrowser.open(f"http://{SERVER_HOST}:{SERVER_PORT}")
+
     logger("INFO", f"Server start.", SERVER_HOST)
 
 except Exception as e:
@@ -80,7 +84,6 @@ while True:
         threading.Thread(target=index, args=(client_connection, request, client_address[0], )).start()
 
     except KeyboardInterrupt: break
-
     except: continue
 
 # Close socket and exit.

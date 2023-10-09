@@ -86,6 +86,7 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
         # Request for index file.
         if file == "/":
             content = open(f"./public/{DEFAULT_PAGE}", encoding=ENCODING).read()
+            logger("INFO", f"Request for file '{DEFAULT_PAGE}'.", clinet_ip)
 
         # Request fot PHP files.
         elif file_type == "PHP":
@@ -104,6 +105,8 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
             # Execute PHP-CGI and get the result from CGI.
             content = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=False)
             content = content.stdout.decode(encoding=ENCODING)
+
+            logger("INFO", f"Request for file '{file}'.", clinet_ip)
 
         # Request fot media files.
         elif file_type in ["IMAGE", "VIDEO", "AUDIO"]:
@@ -140,7 +143,7 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
         content = open("./public/" + error_page[code], encoding=ENCODING).read()
 
     # Encode the content if it is not a media file.
-    if file_type not in ["IMAGE", "VIDEO", "AUDIO"]:
+    if file_type not in {"IMAGE", "VIDEO", "AUDIO"}:
         content = content.encode()
 
     # Sned HTTP response.
