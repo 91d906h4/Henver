@@ -26,8 +26,8 @@ def hsecurity(request: list, clinet_ip: str="") -> dict:
     server_errors   = request["server_errors"]
 
     # Detect the requests that is too long.
-    if MAX_URL_LEN == "-1": pass
-    elif len(file) > int(MAX_URL_LEN): server_errors = 414
+    if MAX_URL_LEN == -1: pass
+    elif len(file) > MAX_URL_LEN: server_errors = 414
 
     # Clear URL percent-encoding characters.
     # 
