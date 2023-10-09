@@ -48,9 +48,11 @@ def logger(label: str, log: str, ip: str="0.0.0.0") -> None:
     if levels[label] < levels[LOG_LEVEL]: return
 
     try:
+        # Clear log message and get now time.
         log = log.replace("\r\n", "").replace("\n", " ")
         now = datetime.now().strftime("%Y/%m/%d %H:%M:%S")
 
+        # Open log file and append log.
         f = open("." + LOG_PATH, mode="a", encoding=ENCODING)
         f.write(f"[{label}]\t{now} {ip}\t{log}\n")
         f.close()
