@@ -65,3 +65,5 @@
 [WARN]	2023/10/08 15:17:35 127.0.0.1	[Errno 13] Permission denied: './public//temp/'
 [WARN]	2023/10/08 16:14:18 127.0.0.1	[Errno 13] Permission denied: './public//temp'
 [WARN]	2023/10/08 21:46:01 127.0.0.1	[Errno 13] Permission denied: './public//temp'
+[FITAL]	2023/10/10 01:15:55 127.0.0.1	Server start failed. Error message: 'str' object cannot be interpreted as an integer
+[FITAL]	2023/10/10 01:16:18 127.0.0.1	Server start failed. Error message: 'str' object cannot be interpreted as an integer

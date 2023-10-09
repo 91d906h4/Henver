@@ -9,7 +9,7 @@ from src.logger import logger
 from src.hexception import URITooLongError
 from src.hconfig import DEFAULT_PAGE, ENCODING, APPEND_SER_NAME, PHP_CGI, \
                         E400_PAGE, E403_PAGE, E404_PAGE, E409_PAGE, E414_PAGE, \
-                        E500_PAGE, E502_PAGE, E503_PAGE
+                        E500_PAGE, E502_PAGE, E503_PAGE, SERVER_VERSION
 
 def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
     file            = request["file"]
@@ -153,7 +153,7 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
 
     # Server name.
     if APPEND_SER_NAME == "enable":
-        client_connection.send(f"Server: Henver\r\n".encode())
+        client_connection.send(f"Server: Henver {SERVER_VERSION}\r\n".encode())
 
     # PHP file.
     # PHP-CGI will generate the header, so we just return everything.

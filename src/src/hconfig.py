@@ -37,3 +37,6 @@ PREVENT_DDOS    = str(main_conf["security"]["prevent_ddos"])
 DDOS_COUNT      = str(main_conf["security"]["ddos_count"])
 DDOS_TIME       = str(main_conf["security"]["ddos_time"])
 MAX_URL_LEN     = int(main_conf["security"]["max_url_len"])
+
+# [Version]
+SERVER_VERSION  = "v1.5"

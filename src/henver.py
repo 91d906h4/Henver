@@ -1,35 +1,16 @@
 # Import modules.
-import sys
 import socket
 import threading
 import webbrowser
 
+from src.hcli import hcli
 from src.logger import logger
 from src.hrequest import hrequest
 from src.hresponse import hresponse
 from src.hsecurity import hsecurity
-from src.hconfig import SERVER_HOST, SERVER_PORT
 
-# Read server settings from command line.
-if len(sys.argv) > 1:
-    for param in sys.argv:
-        # Server host.
-        if param.startswith("--host="): SERVER_HOST = param[7:]
-
-        # Server port.
-        elif param.startswith("--port="): SERVER_PORT = param[7:]
-
-        # Help message.
-        elif param in ["--help", "-h"]:
-            print(f"Thank you for using Henver HTTP Server.")
-            print(f"")
-            print(f"Options:")
-            print(f"")
-            print(f"\t--host\t\tUseing comman '--host=XXX.XXX.XXX.XXX' to specify the server host. (Default: '127.0.0.1')")
-            print(f"\t--port\t\tUseing comman '--port=XXX' to specify the port for server. (Defualt: '80')")
-            print(f"")
-
-            exit(0)
+# Call CLI tool.
+SERVER_HOST, SERVER_PORT, quiet_start = hcli()
 
 # Create socket.
 try:
@@ -44,7 +25,7 @@ try:
     print(f"Press CTRL-C to stop server...")
 
     # If server started up successfully, then open website in browser.
-    webbrowser.open(f"http://{SERVER_HOST}:{SERVER_PORT}")
+    if not quiet_start: webbrowser.open(f"http://{SERVER_HOST}:{SERVER_PORT}")
 
     logger("INFO", f"Server start.", SERVER_HOST)
 
@@ -58,7 +39,7 @@ except Exception as e:
     exit(-1)
 
 # Server index.
-def index(client_connection: object, request: str, client_address: str) -> None:
+def index(client_connection: socket.socket, request: str, client_address: str) -> None:
     # Parse request.
     request = hrequest(request)
 
