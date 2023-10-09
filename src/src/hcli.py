@@ -1,6 +1,6 @@
 # hcli
 # 
-#   This module is the CLI tool.
+#   This module is the CLI tool for Henver.
 
 # Import Modules.
 import sys
