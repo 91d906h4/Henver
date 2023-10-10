@@ -109,7 +109,7 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
             logger("INFO", f"Request for file '{file}'.", clinet_ip)
 
         # Request fot media files.
-        elif file_type in ["IMAGE", "VIDEO", "AUDIO"]:
+        elif file_type in {"IMAGE", "VIDEO", "AUDIO"}:
             content = open("./public/" + file, mode="rb").read()
             logger("INFO", f"Request for file '{file}'.", clinet_ip)
 
