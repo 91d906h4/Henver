@@ -81,7 +81,7 @@ def hresponse(request: dict, clinet_ip: str, client_connection: object) -> None:
 
     try:
         # Raise server errors.
-        if server_errors == 414: raise URITooLongError("Get request longer than max_url_len.")
+        if server_errors == 414: raise URITooLongError
 
         # Request for index file.
         if file == "/":
